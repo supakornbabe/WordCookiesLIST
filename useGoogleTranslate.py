@@ -11,22 +11,17 @@ def run():
     translator = Translator()
     translateShuffleWord = []
     shuffleWord = []
+    ans = []
     for i in itertools.permutations(inp, length):
         word = ''.join(i)
         shuffleWord.append(word)
         ab = translator.translate(word, src='en', dest='ja')
         translateShuffleWord.append(ab.text.upper())
         if word != ab.text.upper() :
-            print(word,end=' ')
-            print (ab.text.upper())
-    o=0
-    
-    for i in shuffleWord:
-        word = ''.join(i)
-        if word != translateShuffleWord[o] :
             ans.append(word)
-        o+=1
-    for i in ans:
+    ansSet = list(set(ans))
+    ansSet.sort()
+    for i in ansSet:
         print(i)
 if __name__ == '__main__':
     inp = input("CHAR: ").upper()
