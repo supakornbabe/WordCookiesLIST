@@ -14,10 +14,7 @@ def run():
     length = int(input("Length(-1 to quit): "))
     if length == -1 :
         sys.exit()
-    #noOfOutput = math.factorial(lenInp) / (math.factorial(lenInp - length)*math.factorial())
-        
     noOfOutput = math.factorial(lenInp) / math.factorial(lenInp - length)/noOfSame 
-    #noOfOutput = lenInp ** length 
     no = 0
     shuffleWord = []
     f = open('word.txt', 'r')
@@ -53,3 +50,4 @@ if __name__ == '__main__':
     noOfSame = int(input("Same: "))
     while True:
         run()
+        

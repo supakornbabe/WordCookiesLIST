@@ -22,3 +22,4 @@ if __name__ == '__main__':
     inp = input("CHAR: ").upper()
     while True:
         run()
+        
